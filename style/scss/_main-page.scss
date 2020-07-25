@@ -1,0 +1,81 @@
+.main-page {
+    background-color: $col-grey;
+
+    &__layout {
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    &__box {
+        margin: 0 auto;
+        max-width: 1440px;
+        width: 100%;
+        padding: 0 0 0 168px;
+        display: flex;
+        justify-content: space-between;
+
+        &__left {
+            padding-top: 171px;
+            padding-bottom: 300px;
+            width: 100%;
+            max-width: 460px;
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                font-size: 54px;
+                line-height: 65px;
+                font-weight: $f-weight-bold;
+            }
+
+            p {
+                margin-top: 23px;
+                font-size: $fs-normal;
+                font-weight: $f-weight-normal;
+                line-height: 28px;
+                color: $col-grey-2;
+            }
+
+            .btn {
+                margin-top: 34px;
+                max-width: 166px;
+            }
+        }
+
+        &__right {
+            position: relative;
+            width: 1000px;
+
+            &::before {
+                position: absolute;
+                content: '';
+                left: 180px;
+                top: -120px;
+                width: 750px;
+                height: 900px;
+                background-image: url('../../images/image-mockups.png');
+                background-repeat: no-repeat;
+                z-index: 2;
+            }
+
+            &:after {
+                position: absolute;
+                content: '';
+                width: 1270px;
+                height: 700px;
+                background-image: url('../../images/bg-intro-desktop.svg');
+                background-position-y: -257px;
+                background-repeat: no-repeat;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main-page {
+      &__box {
+        padding: 0 50px 22px 50px;
+      }
+    }
+  }

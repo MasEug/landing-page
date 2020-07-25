@@ -1,0 +1,85 @@
+.main-choose {
+    position: relative;
+    z-index: 1;
+    margin-top: -130px;
+    background-color: $col-bg;
+
+    &__box {
+        padding: 93px 168px 17px 168px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 39px;
+        line-height: 45px;
+        font-weight: $f-weight-bold;
+    }
+
+    .cont {
+        max-width: 660px;
+        margin-top: 28px;
+        font-size: $fs-normal;
+        font-weight: $f-weight-normal;
+        line-height: 29px;
+        color: $col-grey-2;
+    }
+
+    .row {
+        margin-top: 68px;
+        display: flex;
+        place-content: flex-start;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        flex: 0 0 50%;
+        max-width: 248px;
+        margin-bottom: 72px;
+
+        &__icon {
+            width: 71px;
+            height: 71px;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+
+            &.banking {
+                background-image: url('../../images/icon-online.svg');
+            }
+
+            &.budgeting {
+                background-image: url('../../images/icon-budgeting.svg');
+            }
+
+            &.onboarding {
+                background-image: url('../../images/icon-onboarding.svg');
+            }
+
+            &.api {
+                background-image: url('../../images/icon-api.svg');
+            }
+        }
+
+        &__title {
+            margin-top: 45px;
+            font-size: 22px;
+        }
+
+        &__cont {
+            margin-top: 30px;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            color: $col-grey-2;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main-choose {
+      &__box {
+        padding: 93px 50px 17px 50px;
+      }
+    }
+  }
