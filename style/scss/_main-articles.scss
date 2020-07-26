@@ -44,6 +44,8 @@
             border-top-left-radius: 0.375em;
             width: 100%;
             height: 12.500em;
+            background-repeat: no-repeat;
+            background-size: cover;
             
             &.currency {
                 background-image: url('../../images/image-currency.jpg');
