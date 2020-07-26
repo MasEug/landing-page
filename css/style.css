@@ -209,6 +209,10 @@ table {
   background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
 }
 
+.modal-menu {
+  display: none;
+}
+
 @media screen and (max-width: 74.938rem) {
   .header__box {
     padding: 1.188em 2.5em 1.063em 2.5em;
