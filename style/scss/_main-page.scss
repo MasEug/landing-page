@@ -8,51 +8,51 @@
 
     &__box {
         margin: 0 auto;
-        max-width: 1440px;
+        max-width: 90.000em;
         width: 100%;
-        padding: 0 0 0 168px;
+        padding: 0 0 0 10.375rem;
         display: flex;
         justify-content: space-between;
 
         &__left {
-            padding-top: 171px;
-            padding-bottom: 300px;
+            padding-top: 10.688em;
+            padding-bottom: 18.750em;
             width: 100%;
-            max-width: 460px;
+            max-width: 28.750em;
             display: flex;
             flex-direction: column;
 
             h1 {
-                font-size: 54px;
-                line-height: 65px;
-                font-weight: $f-weight-bold;
+                font-size: 3.375em;
+                line-height: 4.063rem;
+                font-weight: $f-weight-300;
             }
 
             p {
-                margin-top: 23px;
-                font-size: $fs-normal;
-                font-weight: $f-weight-normal;
-                line-height: 28px;
+                margin-top: 1.438rem;
+                font-size: $fs-18;
+                font-weight: $f-weight-300;
+                line-height: 1.750rem;
                 color: $col-grey-2;
             }
 
             .btn {
-                margin-top: 34px;
-                max-width: 166px;
+                margin-top: 2.125rem;
+                max-width: 10.188rem;
             }
         }
 
         &__right {
             position: relative;
-            width: 1000px;
+            width: 62.500em;
 
             &::before {
                 position: absolute;
                 content: '';
-                left: 180px;
-                top: -120px;
-                width: 750px;
-                height: 900px;
+                left: 11.250em;
+                top: -7.625em;
+                width: 46.875em;
+                height: 56.250em;
                 background-image: url('../../images/image-mockups.png');
                 background-repeat: no-repeat;
                 z-index: 2;
@@ -61,10 +61,11 @@
             &:after {
                 position: absolute;
                 content: '';
-                width: 1270px;
-                height: 700px;
+                top: -0.188em;
+                width: 79.375em;
+                height: 43.750em;
                 background-image: url('../../images/bg-intro-desktop.svg');
-                background-position-y: -257px;
+                background-position-y: -16.063em;
                 background-repeat: no-repeat;
                 z-index: 0;
             }
@@ -72,10 +73,71 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 74.938rem) {
     .main-page {
       &__box {
-        padding: 0 50px 22px 50px;
+        padding: 0 2.5rem 1.375rem 2.5rem;
+
+        &__left {
+            padding-bottom: 18.75em;
+        }
       }
     }
   }
+
+@media screen and (max-width: 47.938rem) {
+    .main-page {
+        &__box {
+            padding: 0 0 1.375rem 0;
+            flex-direction: column-reverse;
+
+            &__left {
+                max-width: inherit;
+                padding: 0 1.5rem;
+
+                .title {
+                    text-align: center;
+                    font-size: 2.500em;
+                    line-height: 3.125rem;
+                }
+
+                .cont {
+                    margin-top: 0.750rem;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    line-height: 1.563rem;
+                    text-align: center;
+                }
+
+                .btn {
+                    margin: 1.875rem auto;
+                }
+               
+            }
+    
+            &__right {
+                width: 100%;
+                height: 20.000em;
+    
+                &::before {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 21.563rem;
+                    height: 26.250em;
+                    background-size: contain;
+                }
+    
+                &:after {
+                    top: -4.250em;
+                    right: -0.125em;
+                    width: 23.750em;
+                    height: 26.250em;
+                    background-image: url('../../images/bg-intro-mobile.svg');
+                    background-position-y: inherit;
+                    background-position-x: inherit;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}

@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&display=swap');
 @import "../scss/variables";
 @import "../scss/reset";
 @import "../scss/header";
 @import "../scss/main-page";
 @import "../scss/main-choose";
 @import "../scss/main-articles";
+@import "../scss/footer";
 
 html {
   font-family: 'Public Sans', sans-serif;
-  font-size: $fs-normal;
   box-sizing: border-box;
 }
 
@@ -19,12 +19,13 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $col-bg;
-  color: #2d314d;
+  color: $col-dark-blue;
 }
 
 body {
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 *, *::before, *::after {
@@ -38,13 +39,14 @@ a {
 
 button {
   cursor: pointer;
-  padding: 14px 39px 15px 39px;
+  padding: 14px 32px 15px 32px;
   outline: none;
   border: none;
   background: linear-gradient(90deg, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 100%);
   border-radius: 22px;
   color: $col-white;
-  font-weight: $f-weight-bold;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: $f-weight-600;
   transition: .3s;
 
   &:hover {
@@ -52,16 +54,15 @@ button {
   }
 }
 
+.attribution { padding: 20px; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 .container {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 90em;
   width: 100%;
 }
 
 .container-fluid {
   width: 100%;
-}
-
-@media screen and (max-width: 767px) {
-  
 }

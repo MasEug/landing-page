@@ -2,33 +2,33 @@
     background-color: $col-grey;
 
     &__box {
-        padding: 93px 168px 80px 168px;
+        padding: 5.625em 10.3750rem 5.000em 10.3750rem;
         display: flex;
         flex-direction: column;
     }
 
     .title {
-        font-size: 39px;
-        line-height: 45px;
-        font-weight: $f-weight-bold;
+        font-size: 2.438em;
+        line-height: 2.813rem;
+        font-weight: $f-weight-300;
     }
 
     .row {
-        margin-top: 50px;
+        margin-top: 3.000em;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-column-gap: 25px;
+        grid-column-gap: 1.750em;
     }
 
     .box {
         background-color: $col-white;
-        border-radius: 6px;
+        border-radius: 0.375em;
         transition: ease-in .3s;
 
         &:hover {
-            -webkit-box-shadow: 0px 0px 15px 0px rgba(150,152,166,1);
-            -moz-box-shadow: 0px 0px 15px 0px rgba(150,152,166,1);
-            box-shadow: 0px 0px 15px 0px rgba(150,152,166,1);
+            -webkit-box-shadow: 0px 0px 0.938em 0px rgba(150,152,166,1);
+            -moz-box-shadow: 0px 0px 0.938em 0px rgba(150,152,166,1);
+            box-shadow: 0px 0px 0.938em 0px rgba(150,152,166,1);
 
             .box__desc {
                 color: $col-green;
@@ -36,14 +36,14 @@
         }
 
         &-pad {
-            padding: 28px 25px 20px 25px;
+            padding: 1.813em 1.500em 0.250em 1.500em;
         }
 
         &__image {
-            border-top-right-radius: 6px;
-            border-top-left-radius: 6px;
+            border-top-right-radius: 0.375em;
+            border-top-left-radius: 0.375em;
             width: 100%;
-            height: 200px;
+            height: 12.500em;
             
             &.currency {
                 background-image: url('../../images/image-currency.jpg');
@@ -63,30 +63,65 @@
         }
 
         &__title {
-            font-size: 12px;
-            margin-bottom: 0.625rem;
+            font-size: 0.625em;
+            margin-bottom: 0.813rem;
             color: $col-grey-2;
         }
 
         &__desc {
-            font-size: 17px;
-            line-height: 1.2;
-            font-weight: $f-weight-bold;
-            margin-bottom: 9px;
+            font-size: .938rem;
+            line-height: 1.35;
+            font-weight: $f-weight-400;
+            margin-bottom: 0.563rem;
         }
 
         &__cont {
-            font-size: 15px;
-            line-height: 18px;
+            font-size: 0.813em;
+            line-height: 1.125rem;
             color: $col-grey-2;
         }
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 74.938rem) {
     .main-articles {
       &__box {
-        padding: 93px 50px 80px 50px;
+        padding: 5.813em 2.5em 5.000em 2.5em;
       }
+    }
+  }
+
+  @media screen and (max-width: 47.938rem) {
+    .main-articles {
+        margin-top: 0;
+
+        &__box {
+          padding: 5.375em 1.5em 6.5em 1.5em;
+        }
+
+        .title {
+            padding: 0 1.5rem;
+            font-size: 1.875em;
+            line-height: 2.375rem;
+            text-align: center;
+        }
+
+        .cont {
+            margin-top: 1rem;
+            font-size: 0.938em;
+            font-weight: 300;
+            line-height: 1.563rem;
+            text-align: center;
+        }
+
+        .row {
+            margin-top: 1.875rem;
+            grid-template-columns: 1fr;
+            grid-row-gap: 1.250rem;
+        }
+
+        .box-pad {
+            padding: 1.938rem 1.875rem 1.500rem 1.875rem;
+        }
     }
   }
